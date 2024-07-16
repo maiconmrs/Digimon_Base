@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Digimon</title>
+</head>
+<body>
+    <nav>
+    <a href="{{ url_for('home')}}">Home</a>
+    <a href="{{ url_for('add_digimon')}}">Add New Digimon</a>
+    </nav>
+
+    <h1>Add a New Digimon</h1>
+    <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+        <label for="level">Level:</label>
+        <input type="text" id="level" name="level"><br>
+        <label for="type">Type:</label>
+        <input type="text" id="type" name="type"><br>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea><br>
+        <label for="image_url">Image URL:</label>
+        <input type="text" id="image_url" name="image_url"><br>
+        <button type="submit">Add Digimon</button>
+    </form>
+</body>
+</html>

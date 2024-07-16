@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digimon Home</title>
+</head>
+<body>
+    <nav>
+    <a href="{{ url_for('home')}}">Home</a>
+    <a href="{{ url_for('add_digimon')}}">Add New Digimon</a>
+    </nav>
+
+    <h1>Welcome to the Digimon World!</h1>
+    <div>
+        {% for digimon in digimons %}
+        <div>
+            <h2>{{ digimon.name }}</h2>
+            <p><strong>Level:</strong> {{ digimon.level }}</p>
+            <p><strong>Type:</strong> {{ digimon.type }}</p>
+            <p><strong>Description:</strong> {{ digimon.description }}</p>
+            <img src="{{ digimon.image_url }}" alt="{{ digimon.name }}">
+        </div>
+         {% endfor %}
+    </div>
+</body>
+</html>
